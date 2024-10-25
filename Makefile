@@ -44,15 +44,15 @@ build_dir:
 	@echo "#######BUILDING DIRECTORIES FOR OUTPUT BINARIES#######"
 	$(call makeallmodules,build_dir)
 
-# clean:
-# 	@echo "#######BUILDING DIRECTORIES FOR OUTPUT BINARIES#######"
-# 	-(cd src/employee; $(CLEAN))
-# 	-(cd src/db_mgr; $(CLEAN))
-# 	-(cd src/ui_controller; $(CLEAN))
-
 clean:
 	@echo "#######BUILDING DIRECTORIES FOR OUTPUT BINARIES#######"
-	-$(call makeallmodules,clean)
+	-(cd src/employee; $(CLEAN))
+	-(cd src/db_mgr; $(CLEAN))
+	-(cd src/ui_controller; $(CLEAN))
+
+# clean:
+# 	@echo "#######BUILDING DIRECTORIES FOR OUTPUT BINARIES#######"
+# 	-$(call makeallmodules,clean)
 
 # install:
 # 	(cd src/employee; $(BUILD) install)
